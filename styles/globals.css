@@ -1,0 +1,9 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Personalizações adicionais */
+body {
+  @apply bg-white dark:bg-gray-900;
+}
