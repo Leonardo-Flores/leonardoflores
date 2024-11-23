@@ -5,6 +5,11 @@ import LinkButton from "../components/LinkButton";
 export default function Home() {
   const buttons = [
     {
+      href: "https://github.com/Leonardo-Flores",
+      title: "GitHub",
+      description: "",
+    },
+    {
       href: "https://www.linkedin.com/in/leonardo-g-flores/",
       title: "LinkedIn",
       description: "",
@@ -12,11 +17,6 @@ export default function Home() {
     {
       href: "https://www.instagram.com/leonardofloress98",
       title: "Instagram",
-      description: "",
-    },
-    {
-      href: "https://github.com/Leonardo-Flores",
-      title: "GitHub",
       description: "",
     },
     { href: "https://wa.me/+5511993090123", title: "Contato", description: "" },
