@@ -26,7 +26,7 @@ export default function Home() {
     <Layout>
       <section className="flex flex-col items-center text-center mt-10">
         <ProfileHeader
-          imageSrc={"profile.jpg"}
+          imageSrc={"profile.webp"}
           name={"Leonardo Flores"}
           description={"Software Developer"}
         />
