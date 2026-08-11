@@ -6,249 +6,246 @@
   <title>Leonardo Flores — Full-Stack Software Engineer</title>
   <meta name="description" content="Full-stack software engineer. TypeScript, React, Node.js, Python, AWS, Terraform, PostgreSQL. I build products end-to-end — from infrastructure as code to the pixel." />
   <meta property="og:title" content="Leonardo Flores — Full-Stack Software Engineer" />
-  <meta property="og:description" content="I build products end-to-end — from infrastructure as code to the pixel." />
+  <meta property="og:description" content="My portfolio is my desktop — watch the laptop boot, then type around. Full-stack engineer, São Paulo, remote worldwide." />
   <meta property="og:url" content="https://leonardoflores.dev.br" />
+  <meta property="og:image" content="https://leonardoflores.dev.br/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://leonardoflores.dev.br/og.png" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e1e2e'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%23cba6f7' text-anchor='middle'%3E~%3C/text%3E%3C/svg%3E" />
-  <style>
-    /* Catppuccin Mocha — deliberately single-theme: this page matches my rice. */
-    :root {
-      --base: #1e1e2e;
-      --mantle: #181825;
-      --surface: #313244;
-      --overlay: #6c7086;
-      --text: #cdd6f4;
-      --subtext: #a6adc8;
-      --mauve: #cba6f7;
-      --blue: #89b4fa;
-      --green: #a6e3a1;
-      --peach: #fab387;
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      * { transition: none !important; }
-    }
-
-    body {
-      margin: 0;
-      background: var(--base);
-      color: var(--text);
-      font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      padding: 0 1.5rem;
-    }
-
-    .mono { font-family: ui-monospace, "JetBrains Mono", "Cascadia Code", Menlo, monospace; }
-
-    main { max-width: 44rem; margin: 0 auto; }
-
-    a { color: var(--blue); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    a:focus-visible { outline: 2px solid var(--mauve); outline-offset: 3px; border-radius: 2px; }
-
-    /* --- hero --------------------------------------------------------- */
-
-    header { padding: 6rem 0 3rem; }
-
-    .prompt {
-      font-family: ui-monospace, Menlo, monospace;
-      font-size: 0.85rem;
-      color: var(--overlay);
-      margin: 0 0 1.25rem;
-    }
-    .prompt .user { color: var(--green); }
-    .prompt .cmd { color: var(--text); }
-
-    h1 {
-      font-size: clamp(2.1rem, 6vw, 3rem);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin: 0 0 0.75rem;
-    }
-
-    .headline {
-      font-size: 1.15rem;
-      color: var(--subtext);
-      margin: 0 0 0.5rem;
-      max-width: 36rem;
-    }
-    .headline strong { color: var(--text); font-weight: 600; }
-
-    .stack-line {
-      font-family: ui-monospace, Menlo, monospace;
-      font-size: 0.82rem;
-      color: var(--mauve);
-      margin: 1rem 0 0;
-      letter-spacing: 0.02em;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1.75rem;
-    }
-    .links a {
-      font-family: ui-monospace, Menlo, monospace;
-      font-size: 0.85rem;
-      color: var(--text);
-      background: var(--surface);
-      border: 1px solid transparent;
-      padding: 0.45rem 0.9rem;
-      border-radius: 8px;
-      transition: border-color 0.15s;
-    }
-    .links a:hover { border-color: var(--mauve); text-decoration: none; }
-
-    /* --- sections ------------------------------------------------------ */
-
-    h2 {
-      font-family: ui-monospace, Menlo, monospace;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--peach);
-      margin: 3.5rem 0 1rem;
-    }
-    h2::before { content: "## "; color: var(--overlay); }
-
-    p { margin: 0.75rem 0; color: var(--subtext); }
-    p strong { color: var(--text); font-weight: 600; }
-
-    /* --- projects ------------------------------------------------------ */
-
-    .projects {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.9rem;
-    }
-    @media (max-width: 640px) { .projects { grid-template-columns: 1fr; } }
-
-    .project {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-      background: var(--mantle);
-      border: 1px solid var(--surface);
-      border-radius: 12px;
-      padding: 1.1rem 1.2rem;
-      transition: border-color 0.15s, transform 0.1s;
-    }
-    .project:hover { border-color: var(--blue); transform: translateY(-2px); }
-
-    .project a.title {
-      font-weight: 650;
-      color: var(--text);
-      font-size: 1rem;
-    }
-    .project a.title:hover { color: var(--blue); text-decoration: none; }
-
-    .project .desc { font-size: 0.9rem; margin: 0; }
-
-    .project .tags {
-      font-family: ui-monospace, Menlo, monospace;
-      font-size: 0.72rem;
-      color: var(--mauve);
-      margin-top: auto;
-      padding-top: 0.5rem;
-    }
-
-    /* --- footer -------------------------------------------------------- */
-
-    footer {
-      margin: 4.5rem 0 0;
-      padding: 1.5rem 0 3rem;
-      border-top: 1px solid var(--surface);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      font-family: ui-monospace, Menlo, monospace;
-      font-size: 0.78rem;
-      color: var(--overlay);
-    }
-  </style>
+  <link rel="preload" href="vendor/fonts/jetbrains-mono-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="vendor/fonts/jetbrains-mono-700.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/scene.css" />
+  <link rel="stylesheet" href="css/desktop.css" />
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.js" } }
+  </script>
 </head>
 <body>
-  <main>
-    <header>
-      <p class="prompt"><span class="user">leonardo@flores</span>:~$ <span class="cmd">whoami</span></p>
-      <h1>Leonardo Flores</h1>
-      <p class="headline">
-        Full-stack software engineer who builds products <strong>end-to-end</strong> —
-        from infrastructure as code to the pixel. Ten years in technology;
-        currently the sole engineer behind a retail company's entire platform.
-      </p>
-      <p class="stack-line">TypeScript · React · Node.js · Python · Rust · AWS · Terraform · PostgreSQL</p>
-      <nav class="links" aria-label="Profiles">
-        <a href="https://github.com/Leonardo-Flores">github</a>
-        <a href="https://www.linkedin.com/in/leonardo-g-flores">linkedin</a>
-        <a href="mailto:leonardogoncalves.flores@gmail.com">email</a>
-      </nav>
-    </header>
+  <!-- brief cover while the scene loads; the real boot happens on the laptop screen -->
+  <div id="loader" class="mono" role="status">
+    <div class="ld-inner">
+      <p class="ld-name">leonardo flores</p>
+      <p class="ld-role">full-stack software engineer</p>
+    </div>
+  </div>
 
-    <section aria-labelledby="now">
-      <h2 id="now">now</h2>
-      <p>
-        Building a fashion/retail technology platform from scratch, solo: point of sale
-        processing live payments (PIX, cards, TEF terminals), executive dashboards with
-        sub-100ms KPI reads, a factory-floor Rust/Tauri desktop app with RFID, and 100%
-        keyless CI/CD on AWS — <strong>4 products shipped to production in 6 months</strong>.
-      </p>
-      <p>
-        Based in São Paulo, Brazil (UTC−3) · open to remote roles worldwide · fluent English.
-      </p>
+  <!-- 3D stage -->
+  <div id="stage" aria-hidden="true">
+    <div id="css3d-layer"></div>
+  </div>
+
+  <!-- side menu -->
+  <button id="menu-btn" aria-label="menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="side-menu" class="mono" aria-label="site">
+    <a href="#top" data-nav="home" data-i18n="menu.home">home</a>
+    <a href="#c-about" data-nav="about" data-i18n="menu.about">about</a>
+    <a href="#c-work" data-nav="projects" data-i18n="menu.projects">projects</a>
+    <a href="#c-xp" data-nav="experience" data-i18n="menu.xp">experience</a>
+    <a href="#c-contact" data-nav="contact" data-i18n="menu.contact">contact</a>
+    <a href="resume.pdf" target="_blank" rel="noreferrer" data-i18n="menu.resume">resume (pdf)</a>
+    <div class="menu-foot">
+      <a href="https://github.com/Leonardo-Flores" target="_blank" rel="noreferrer">github</a>
+      <a href="https://www.linkedin.com/in/leonardo-g-flores" target="_blank" rel="noreferrer">linkedin</a>
+      <a href="mailto:leonardogoncalves.flores@gmail.com">email</a>
+      <button type="button" class="lang-btn" data-lang-toggle>pt</button>
+    </div>
+  </nav>
+  <div id="menu-backdrop"></div>
+
+  <!-- overlay chrome -->
+  <header id="overlay-top">
+    <span class="brand mono">leonardoflores.dev.br</span>
+    <nav class="overlay-links mono">
+      <a href="https://github.com/Leonardo-Flores" target="_blank" rel="noreferrer">github</a>
+      <a href="https://www.linkedin.com/in/leonardo-g-flores" target="_blank" rel="noreferrer">linkedin</a>
+      <a href="mailto:leonardogoncalves.flores@gmail.com">email</a>
+      <button type="button" class="lang-btn mono" data-lang-toggle>pt</button>
+    </nav>
+  </header>
+  <button id="enter-hint" class="mono hidden" type="button" data-i18n="hint.enter">click the screen to enter ↵</button>
+  <button id="back-hint" class="mono hidden" type="button" data-i18n="hint.back">scroll ↓ to leave the desktop</button>
+  <a id="skip-link" class="mono" href="#c-about" data-i18n="hint.skip">skip to the text version ↓</a>
+
+  <!-- The Hyprland desktop -->
+  <div id="desktop-wrap">
+    <div id="desktop" class="off">
+      <div id="boot" class="mono" aria-hidden="true"></div>
+      <div id="waybar">
+        <div class="wb-left">
+          <button class="wb-ws active" data-ws="1" aria-label="workspace 1: terminal">1</button>
+          <button class="wb-ws" data-ws="2" aria-label="workspace 2: projects">2</button>
+          <button class="wb-ws" data-ws="3" aria-label="workspace 3: about">3</button>
+          <span class="wb-title" id="wb-title">kitty — leo@arch</span>
+        </div>
+        <div class="wb-right">
+          <span class="wb-chip wb-hint">workspaces: click 1·2·3 · or `ws 2`</span>
+          <span class="wb-chip" id="wb-clock">--:--</span>
+        </div>
+      </div>
+
+      <div id="tiles" data-ws="1">
+        <!-- ws1: terminal -->
+        <section class="win ws-1" id="win-term" data-title="kitty — leo@arch">
+          <div class="win-bar"><span class="dot dot-term"></span>leo@arch: ~</div>
+          <div class="term" id="term">
+            <div id="term-out"></div>
+            <div class="term-line">
+              <span class="prompt"><span class="p-user">leo@arch</span><span class="p-sep">:</span><span class="p-path">~</span><span class="p-sym">$</span></span>
+              <span id="term-echo"></span><span class="caret" id="caret"></span>
+            </div>
+            <input id="term-input" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="terminal input" />
+          </div>
+        </section>
+
+        <!-- ws2: projects -->
+        <section class="win ws-2" id="win-projects" data-title="projects.md — nvim">
+          <div class="win-bar"><span class="dot dot-proj"></span>projects.md</div>
+          <div class="win-body">
+            <a class="proj" href="https://github.com/Leonardo-Flores/open-pos" target="_blank" rel="noreferrer">
+              <span class="proj-name">open-pos</span>
+              <span class="proj-desc">Point-of-sale with pluggable payment providers — PIX, cards, a decline path you can demo.</span>
+              <span class="proj-tags mono">react · hono · postgres</span>
+            </a>
+            <a class="proj" href="https://github.com/Leonardo-Flores/terraform-aws-oidc-starter" target="_blank" rel="noreferrer">
+              <span class="proj-name">terraform-aws-oidc-starter</span>
+              <span class="proj-desc">Keyless AWS deploys from GitHub Actions. Zero static credentials.</span>
+              <span class="proj-tags mono">terraform · oidc · aws</span>
+            </a>
+            <a class="proj" href="https://github.com/Leonardo-Flores/vilavest" target="_blank" rel="noreferrer">
+              <span class="proj-name">vilavest</span>
+              <span class="proj-desc">E-commerce platform — Go backend, React storefront.</span>
+              <span class="proj-tags mono">go · react · docker</span>
+            </a>
+            <a class="proj" href="https://github.com/Leonardo-Flores/dotfiles" target="_blank" rel="noreferrer">
+              <span class="proj-name">dotfiles</span>
+              <span class="proj-desc">This very desktop — Arch + Hyprland, Catppuccin everywhere.</span>
+              <span class="proj-tags mono">arch · hyprland</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- ws3: about -->
+        <section class="win ws-3" id="win-about" data-title="about.md — nvim">
+          <div class="win-bar"><span class="dot dot-about"></span>about.md</div>
+          <div class="win-body about">
+            <p><strong>Leonardo Flores</strong> — full-stack engineer, 10 years in tech.
+            I started in infrastructure and moved into development, which shaped how I
+            build: reliability, performance, and maintainability from the first commit.</p>
+            <p>Currently the sole engineer behind a retail company's platform: POS with
+            live payments, executive dashboards, a factory-floor Rust/Tauri app with RFID,
+            and keyless CI/CD on AWS — <strong>4 products in production in 6 months</strong>.</p>
+            <p class="about-meta mono">são paulo · UTC−3 · remote worldwide · fluent english</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll runway: scrolling closes the laptop -->
+  <div id="scroll-space" aria-hidden="true"></div>
+
+  <!-- text version -->
+  <main id="content">
+    <section class="c-section" id="c-about">
+      <h2 class="mono" data-i18n="about.h2"><span>##</span> about</h2>
+      <p data-i18n="about.p1">I'm <strong>Leonardo Flores</strong>, a full-stack software engineer in São Paulo,
+      Brazil — 10 years in technology. I started in infrastructure and moved into
+      development, which shaped how I build: reliability, performance, and maintainability
+      from the first commit.</p>
+      <p data-i18n="about.p2">Today I'm the <strong>sole engineer behind a retail company's entire technology
+      platform</strong>: a point of sale processing live payments (PIX, cards, TEF
+      terminals), executive dashboards with sub-100ms KPI reads, a factory-floor
+      Rust/Tauri desktop app with RFID, and 100% keyless CI/CD on AWS —
+      <strong>4 products shipped to production in 6 months</strong>. I've also integrated
+      AI/LLMs into production, including an AI/OCR pipeline that eliminated manual data
+      entry on a factory floor.</p>
+      <p class="c-meta mono">typescript · react · node.js · python · rust · aws · terraform · postgresql</p>
     </section>
 
-    <section aria-labelledby="work">
-      <h2 id="work">selected work</h2>
-      <div class="projects">
-        <article class="project">
-          <a class="title" href="https://github.com/Leonardo-Flores/open-pos">open-pos</a>
-          <p class="desc">Point-of-sale system with pluggable payment providers — adapter
-          pattern, integer-cents money, and a decline path you can actually demo.</p>
-          <p class="tags">react · hono · postgresql</p>
-        </article>
-        <article class="project">
-          <a class="title" href="https://github.com/Leonardo-Flores/terraform-aws-oidc-starter">terraform-aws-oidc-starter</a>
-          <p class="desc">Keyless AWS deploys from GitHub Actions: OIDC trust pinned per repo
-          and branch, plan-on-PR, gated applies. Zero static credentials.</p>
-          <p class="tags">terraform · github-actions · aws</p>
-        </article>
-        <article class="project">
-          <a class="title" href="https://github.com/Leonardo-Flores/vilavest">vilavest</a>
-          <p class="desc">E-commerce platform: Go backend, React storefront, PostgreSQL,
-          fully dockerized.</p>
-          <p class="tags">go · react · docker</p>
-        </article>
-        <article class="project">
-          <a class="title" href="https://github.com/Leonardo-Flores/dotfiles">dotfiles</a>
-          <p class="desc">Arch Linux + Hyprland environment, Catppuccin everywhere —
-          the same palette you're looking at right now.</p>
-          <p class="tags">arch · hyprland · stow</p>
-        </article>
+    <section class="c-section" id="c-work">
+      <h2 class="mono" data-i18n="work.h2"><span>##</span> selected work</h2>
+      <div class="c-projects">
+        <a class="c-proj" href="https://github.com/Leonardo-Flores/open-pos" target="_blank" rel="noreferrer">
+          <span class="c-proj-name mono">open-pos</span>
+          <p data-i18n="work.pos">A point-of-sale system with pluggable payment providers. Adapter pattern for
+          PIX/cards/cash, prices snapshotted at sale time, money in integer cents, and a
+          deterministic decline path for demos. React 19, Hono, PostgreSQL.</p>
+        </a>
+        <a class="c-proj" href="https://github.com/Leonardo-Flores/terraform-aws-oidc-starter" target="_blank" rel="noreferrer">
+          <span class="c-proj-name mono">terraform-aws-oidc-starter</span>
+          <p data-i18n="work.tf">Keyless AWS deploys from GitHub Actions: OIDC trust pinned per repo and
+          branch, read-only plans on PRs, gated applies on main. Zero static credentials —
+          use it as a template.</p>
+        </a>
+        <a class="c-proj" href="https://github.com/Leonardo-Flores/vilavest" target="_blank" rel="noreferrer">
+          <span class="c-proj-name mono">vilavest</span>
+          <p data-i18n="work.vila">E-commerce platform built with a Go backend, React storefront, and
+          PostgreSQL — fully dockerized.</p>
+        </a>
+        <a class="c-proj" href="https://github.com/Leonardo-Flores/dotfiles" target="_blank" rel="noreferrer">
+          <span class="c-proj-name mono">dotfiles</span>
+          <p data-i18n="work.dot">The Arch + Hyprland environment this site recreates — Catppuccin Mocha
+          everywhere, managed with GNU Stow.</p>
+        </a>
       </div>
     </section>
 
-    <section aria-labelledby="background">
-      <h2 id="background">background</h2>
-      <p>
-        I started in infrastructure and moved into development, which shaped how I build:
-        reliability, performance, and maintainability from the first commit. Along the way —
-        Python automation that cut user provisioning from ~10 minutes to under 1 at
-        QuintoAndar, full-stack work on Itaú's datacenter self-service portal, and AI/LLM
-        integrations (OpenAI, Anthropic) running in production, including an AI/OCR pipeline
-        that eliminated manual data entry on a factory floor.
+    <section class="c-section" id="c-xp">
+      <h2 class="mono" data-i18n="xp.h2"><span>##</span> experience</h2>
+      <ul class="c-xp">
+        <li>
+          <span class="c-xp-when mono">2026 — now</span>
+          <div data-i18n="xp.1"><strong>Founding Full-Stack Engineer</strong> · fashion/retail tech platform —
+          built the company's entire stack solo, from Terraform up to the POS.</div>
+        </li>
+        <li>
+          <span class="c-xp-when mono">2025 — 2026</span>
+          <div data-i18n="xp.2"><strong>Full-Stack Developer</strong> · Itaú Unibanco (via consultancy) —
+          datacenter self-service portal, Python/Flask.</div>
+        </li>
+        <li>
+          <span class="c-xp-when mono">2021 — 2024</span>
+          <div data-i18n="xp.3"><strong>Software Engineer</strong> · QuintoAndar — Python/Node automation,
+          microservices on AWS; cut user provisioning from ~10 min to under 1.</div>
+        </li>
+        <li>
+          <span class="c-xp-when mono">2019 — 2021</span>
+          <div data-i18n="xp.4"><strong>IT Infrastructure Analyst</strong> · QuintoAndar — where the
+          infrastructure instincts come from.</div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="c-section" id="c-contact">
+      <h2 class="mono" data-i18n="contact.h2"><span>##</span> contact</h2>
+      <p data-i18n="contact.p">Open to remote roles worldwide (UTC−3, deep overlap with US time zones), and to
+      good conversations about hard problems.</p>
+      <p class="c-links">
+        <a href="mailto:leonardogoncalves.flores@gmail.com">leonardogoncalves.flores@gmail.com</a><br />
+        <a href="https://www.linkedin.com/in/leonardo-g-flores" target="_blank" rel="noreferrer">linkedin.com/in/leonardo-g-flores</a><br />
+        <a href="https://github.com/Leonardo-Flores" target="_blank" rel="noreferrer">github.com/Leonardo-Flores</a><br />
+        <a href="resume.pdf" target="_blank" rel="noreferrer" data-i18n="menu.resume">resume (pdf)</a>
       </p>
     </section>
 
-    <footer>
-      <span>© 2026 Leonardo Flores</span>
-      <span>catppuccin mocha, as everything should be</span>
+    <footer class="c-footer mono">
+      <span>© 2026 leonardo flores</span>
+      <span data-i18n="footer.tag">catppuccin mocha, as everything should be</span>
     </footer>
   </main>
+
+  <noscript>
+    <div class="noscript">
+      <h1>Leonardo Flores — Full-Stack Software Engineer</h1>
+      <p>TypeScript · React · Node.js · Python · AWS · Terraform · PostgreSQL</p>
+      <p><a href="https://github.com/Leonardo-Flores">GitHub</a> · <a href="https://www.linkedin.com/in/leonardo-g-flores">LinkedIn</a></p>
+    </div>
+  </noscript>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,44 @@
+// Boot sequence typed on the laptop screen itself, before the desktop shows.
+
+const LINES = [
+  ["b-dim", ":: leo-os 10.2026 (arch, btw)"],
+  ["b-ok", ":: mounting /dev/coffee ............ [ok]"],
+  ["b-ok", ":: loading hyprland.conf ........... [ok]"],
+  ["b-ok", ":: starting waybar ................. [ok]"],
+  ["b-ok", ":: importing 10 years of experience  [ok]"],
+  ["b-mauve", ":: welcome, visitor."],
+];
+
+export function runScreenBoot(desktopEl, { instant = false } = {}) {
+  const bootEl = document.getElementById("boot");
+
+  return new Promise((resolve) => {
+    const finish = () => {
+      desktopEl.classList.remove("off");
+      bootEl.classList.remove("booting");
+      resolve();
+    };
+
+    if (instant) {
+      finish();
+      return;
+    }
+
+    bootEl.classList.add("booting");
+
+    let i = 0;
+    const step = () => {
+      if (i < LINES.length) {
+        const [cls, text] = LINES[i++];
+        const div = document.createElement("div");
+        div.className = cls;
+        div.textContent = text;
+        bootEl.appendChild(div);
+        setTimeout(step, 180 + Math.random() * 140);
+      } else {
+        setTimeout(finish, 550);
+      }
+    };
+    setTimeout(step, 450);
+  });
+}
