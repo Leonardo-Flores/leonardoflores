@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leonardo Flores — Full-Stack Software Engineer</title>
+  <meta name="description" content="Full-stack software engineer. TypeScript, React, Node.js, Python, AWS, Terraform, PostgreSQL. I build products end-to-end — from infrastructure as code to the pixel." />
+  <meta property="og:title" content="Leonardo Flores — Full-Stack Software Engineer" />
+  <meta property="og:description" content="I build products end-to-end — from infrastructure as code to the pixel." />
+  <meta property="og:url" content="https://leonardoflores.dev.br" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231e1e2e'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' fill='%23cba6f7' text-anchor='middle'%3E~%3C/text%3E%3C/svg%3E" />
+  <style>
+    /* Catppuccin Mocha — deliberately single-theme: this page matches my rice. */
+    :root {
+      --base: #1e1e2e;
+      --mantle: #181825;
+      --surface: #313244;
+      --overlay: #6c7086;
+      --text: #cdd6f4;
+      --subtext: #a6adc8;
+      --mauve: #cba6f7;
+      --blue: #89b4fa;
+      --green: #a6e3a1;
+      --peach: #fab387;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+
+    body {
+      margin: 0;
+      background: var(--base);
+      color: var(--text);
+      font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      padding: 0 1.5rem;
+    }
+
+    .mono { font-family: ui-monospace, "JetBrains Mono", "Cascadia Code", Menlo, monospace; }
+
+    main { max-width: 44rem; margin: 0 auto; }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--mauve); outline-offset: 3px; border-radius: 2px; }
+
+    /* --- hero --------------------------------------------------------- */
+
+    header { padding: 6rem 0 3rem; }
+
+    .prompt {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 0.85rem;
+      color: var(--overlay);
+      margin: 0 0 1.25rem;
+    }
+    .prompt .user { color: var(--green); }
+    .prompt .cmd { color: var(--text); }
+
+    h1 {
+      font-size: clamp(2.1rem, 6vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.75rem;
+    }
+
+    .headline {
+      font-size: 1.15rem;
+      color: var(--subtext);
+      margin: 0 0 0.5rem;
+      max-width: 36rem;
+    }
+    .headline strong { color: var(--text); font-weight: 600; }
+
+    .stack-line {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 0.82rem;
+      color: var(--mauve);
+      margin: 1rem 0 0;
+      letter-spacing: 0.02em;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1.75rem;
+    }
+    .links a {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 0.85rem;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid transparent;
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      transition: border-color 0.15s;
+    }
+    .links a:hover { border-color: var(--mauve); text-decoration: none; }
+
+    /* --- sections ------------------------------------------------------ */
+
+    h2 {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--peach);
+      margin: 3.5rem 0 1rem;
+    }
+    h2::before { content: "## "; color: var(--overlay); }
+
+    p { margin: 0.75rem 0; color: var(--subtext); }
+    p strong { color: var(--text); font-weight: 600; }
+
+    /* --- projects ------------------------------------------------------ */
+
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem;
+    }
+    @media (max-width: 640px) { .projects { grid-template-columns: 1fr; } }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      background: var(--mantle);
+      border: 1px solid var(--surface);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem;
+      transition: border-color 0.15s, transform 0.1s;
+    }
+    .project:hover { border-color: var(--blue); transform: translateY(-2px); }
+
+    .project a.title {
+      font-weight: 650;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .project a.title:hover { color: var(--blue); text-decoration: none; }
+
+    .project .desc { font-size: 0.9rem; margin: 0; }
+
+    .project .tags {
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 0.72rem;
+      color: var(--mauve);
+      margin-top: auto;
+      padding-top: 0.5rem;
+    }
+
+    /* --- footer -------------------------------------------------------- */
+
+    footer {
+      margin: 4.5rem 0 0;
+      padding: 1.5rem 0 3rem;
+      border-top: 1px solid var(--surface);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-family: ui-monospace, Menlo, monospace;
+      font-size: 0.78rem;
+      color: var(--overlay);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="prompt"><span class="user">leonardo@flores</span>:~$ <span class="cmd">whoami</span></p>
+      <h1>Leonardo Flores</h1>
+      <p class="headline">
+        Full-stack software engineer who builds products <strong>end-to-end</strong> —
+        from infrastructure as code to the pixel. Ten years in technology;
+        currently the sole engineer behind a retail company's entire platform.
+      </p>
+      <p class="stack-line">TypeScript · React · Node.js · Python · Rust · AWS · Terraform · PostgreSQL</p>
+      <nav class="links" aria-label="Profiles">
+        <a href="https://github.com/Leonardo-Flores">github</a>
+        <a href="https://www.linkedin.com/in/leonardo-g-flores">linkedin</a>
+        <a href="mailto:leonardogoncalves.flores@gmail.com">email</a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="now">
+      <h2 id="now">now</h2>
+      <p>
+        Building a fashion/retail technology platform from scratch, solo: point of sale
+        processing live payments (PIX, cards, TEF terminals), executive dashboards with
+        sub-100ms KPI reads, a factory-floor Rust/Tauri desktop app with RFID, and 100%
+        keyless CI/CD on AWS — <strong>4 products shipped to production in 6 months</strong>.
+      </p>
+      <p>
+        Based in São Paulo, Brazil (UTC−3) · open to remote roles worldwide · fluent English.
+      </p>
+    </section>
+
+    <section aria-labelledby="work">
+      <h2 id="work">selected work</h2>
+      <div class="projects">
+        <article class="project">
+          <a class="title" href="https://github.com/Leonardo-Flores/open-pos">open-pos</a>
+          <p class="desc">Point-of-sale system with pluggable payment providers — adapter
+          pattern, integer-cents money, and a decline path you can actually demo.</p>
+          <p class="tags">react · hono · postgresql</p>
+        </article>
+        <article class="project">
+          <a class="title" href="https://github.com/Leonardo-Flores/terraform-aws-oidc-starter">terraform-aws-oidc-starter</a>
+          <p class="desc">Keyless AWS deploys from GitHub Actions: OIDC trust pinned per repo
+          and branch, plan-on-PR, gated applies. Zero static credentials.</p>
+          <p class="tags">terraform · github-actions · aws</p>
+        </article>
+        <article class="project">
+          <a class="title" href="https://github.com/Leonardo-Flores/vilavest">vilavest</a>
+          <p class="desc">E-commerce platform: Go backend, React storefront, PostgreSQL,
+          fully dockerized.</p>
+          <p class="tags">go · react · docker</p>
+        </article>
+        <article class="project">
+          <a class="title" href="https://github.com/Leonardo-Flores/dotfiles">dotfiles</a>
+          <p class="desc">Arch Linux + Hyprland environment, Catppuccin everywhere —
+          the same palette you're looking at right now.</p>
+          <p class="tags">arch · hyprland · stow</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="background">
+      <h2 id="background">background</h2>
+      <p>
+        I started in infrastructure and moved into development, which shaped how I build:
+        reliability, performance, and maintainability from the first commit. Along the way —
+        Python automation that cut user provisioning from ~10 minutes to under 1 at
+        QuintoAndar, full-stack work on Itaú's datacenter self-service portal, and AI/LLM
+        integrations (OpenAI, Anthropic) running in production, including an AI/OCR pipeline
+        that eliminated manual data entry on a factory floor.
+      </p>
+    </section>
+
+    <footer>
+      <span>© 2026 Leonardo Flores</span>
+      <span>catppuccin mocha, as everything should be</span>
+    </footer>
+  </main>
+</body>
+</html>
