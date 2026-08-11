@@ -74,6 +74,10 @@ export function initI18n() {
       el.innerHTML = lang === "pt" && PT[key] ? PT[key] : en;
     }
     for (const b of toggles) b.textContent = lang === "pt" ? "en" : "pt";
+    // the resume itself is a different file per language
+    for (const a of document.querySelectorAll("[data-resume]")) {
+      a.href = lang === "pt" ? "curriculo.pdf" : "resume.pdf";
+    }
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
     localStorage.setItem("lang", lang);
   }
