@@ -52,8 +52,8 @@ const PT = {
     sistemas quebram.`,
   "contact.h2": "<span>##</span> contato",
   "contact.p":
-    `Procuro vaga remota, de qualquer lugar do mundo. Estou em São Paulo (UTC−3).
-    E-mail é o jeito mais rápido de falar comigo.`,
+    `Procuro vaga remota, de qualquer lugar do mundo. Também topo freelas.
+    Estou em São Paulo (UTC−3). E-mail é o jeito mais rápido de falar comigo.`,
   "footer.tag": "tema: catppuccin mocha",
 };
 
