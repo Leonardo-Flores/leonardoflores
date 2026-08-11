@@ -11,27 +11,24 @@ const LINKS = {
 };
 
 const SECRET_LS = `<span class="t-dim">definitely-not-secrets/:</span>
-<span class="t-blue">hire-leonardo.txt</span>  <span class="t-blue">world-domination-roadmap.md</span>  <span class="t-blue">salary-expectations.pdf.gpg</span>
-<span class="t-dim">try: cat hire-leonardo.txt</span>`;
+<span class="t-blue">hire-leonardo.txt</span>  <span class="t-blue">world-domination-roadmap.md</span>  <span class="t-blue">salary-expectations.pdf.gpg</span>`;
 
 const SECRET_FILES = {
-  "hire-leonardo.txt": `<span class="t-green">you actually explored the file system. I like you already.</span>
-email <a href="mailto:leonardogoncalves.flores@gmail.com">leonardogoncalves.flores@gmail.com</a> and mention this file —
-you'll skip the small talk and go straight to the good conversation.`,
-  "world-domination-roadmap.md": `<span class="t-peach">step 1:</span> ship.
-<span class="t-peach">step 2:</span> ship again.
-<span class="t-peach">step 3:</span> <span class="t-red">[REDACTED]</span>`,
-  "salary-expectations.pdf.gpg": `<span class="t-red">gpg: decryption failed</span> — that one gets discussed on a call. 😉`,
+  "hire-leonardo.txt": `if you found this, email me and say so:
+<a href="mailto:leonardogoncalves.flores@gmail.com">leonardogoncalves.flores@gmail.com</a>`,
+  "world-domination-roadmap.md": `1. ship
+2. ship
+3. <span class="t-red">[REDACTED]</span>`,
+  "salary-expectations.pdf.gpg": `<span class="t-red">gpg: decryption failed: No secret key</span>`,
 };
 
 const NEOFETCH = `<span class="t-blue">        /\\</span>         <span class="t-mauve">leo</span>@<span class="t-mauve">arch</span>
 <span class="t-blue">       /  \\</span>        ─────────────
-<span class="t-blue">      /\\   \\</span>       <span class="t-peach">os</span>      arch linux, btw
+<span class="t-blue">      /\\   \\</span>       <span class="t-peach">os</span>      arch linux
 <span class="t-blue">     /  __  \\</span>      <span class="t-peach">wm</span>      hyprland
 <span class="t-blue">    /  (  )  \\</span>     <span class="t-peach">shell</span>   zsh + tmux
 <span class="t-blue">   / __|  |__ \\</span>    <span class="t-peach">editor</span>  neovim
 <span class="t-blue">  /.\`        \`.\\</span>   <span class="t-peach">theme</span>   catppuccin mocha
-                   <span class="t-peach">uptime</span>  10 years in tech
                    <span class="t-peach">stack</span>   ts · react · node · python · aws`;
 
 const COMMANDS = {
@@ -46,17 +43,17 @@ const COMMANDS = {
   <span class="t-green">clear</span>       clean this mess`,
 
   whoami: () =>
-    `<span class="t-mauve">Leonardo Flores</span> — full-stack software engineer, São Paulo (remote worldwide).
-10 years in tech: started in infrastructure, moved into development.
-Currently the sole engineer behind a retail company's entire platform —
-POS with live payments, factory-floor Rust/Tauri + RFID, keyless CI/CD on AWS.
-<span class="t-dim">4 products shipped to production in 6 months.</span>`,
+    `<span class="t-mauve">Leonardo Flores</span>. full-stack developer in São Paulo, 10 years in tech.
+started in infrastructure, moved to development. today I'm the only
+engineer at a retail company: I built their POS, their dashboards and
+the software that runs their factory.
+stack: typescript, react, node, python, aws.`,
 
   projects: () =>
-    `<span class="t-blue">open-pos</span>                    POS with pluggable payment providers
-<span class="t-blue">terraform-aws-oidc-starter</span>  keyless AWS deploys, zero static credentials
-<span class="t-blue">vilavest</span>                    e-commerce — Go + React + PostgreSQL
-<span class="t-blue">dotfiles</span>                    this desktop, for real
+    `<span class="t-blue">open-pos</span>                    point of sale. react + hono + postgres
+<span class="t-blue">terraform-aws-oidc-starter</span>  terraform template for keyless aws deploys
+<span class="t-blue">vilavest</span>                    e-commerce. go + react
+<span class="t-blue">dotfiles</span>                    this desktop
 <span class="t-dim">try:</span> open open-pos`,
 
   neofetch: () => NEOFETCH,
@@ -72,11 +69,11 @@ POS with live payments, factory-floor Rust/Tauri + RFID, keyless CI/CD on AWS.
 
   "definitely-not-secrets": () => SECRET_LS,
 
-  hyprctl: () => `<span class="t-dim">3 windows · gaps_in 0 · gaps_out 0 · rounding 0 — as it should be</span>`,
+  hyprctl: () => `<span class="t-dim">3 workspaces · gaps_in 0 · gaps_out 0 · rounding 0</span>`,
 
-  vim: () => `<span class="t-dim">this terminal is fake, but the vim addiction is real. (:q to imagine leaving)</span>`,
+  vim: () => `<span class="t-dim">not installed here. scroll down for the readable version.</span>`,
 
-  exit: () => `<span class="t-dim">nice try. there is no escape from the portfolio.</span>`,
+  exit: () => `<span class="t-dim">logout</span>`,
 };
 
 function runCommand(raw, { setWs }) {
@@ -116,21 +113,21 @@ function runCommand(raw, { setWs }) {
 
   if (lower === "sudo") {
     if (input.toLowerCase().includes("hire")) {
-      return { html: `<span class="t-green">[sudo] permission granted.</span> email me: <a href="mailto:leonardogoncalves.flores@gmail.com">leonardogoncalves.flores@gmail.com</a>` };
+      return { html: `[sudo] ok. email: <a href="mailto:leonardogoncalves.flores@gmail.com">leonardogoncalves.flores@gmail.com</a>` };
     }
-    return { html: `<span class="t-red">leo is not in the sudoers file. this incident will be reported.</span>` };
+    return { html: `<span class="t-red">visitor is not in the sudoers file. This incident will be reported.</span>` };
   }
 
   if (lower === "rm") {
-    return { html: `<span class="t-red">rm: refusing to delete the portfolio you're standing on.</span>` };
+    return { html: `<span class="t-red">rm: read-only file system</span>` };
   }
 
   if (lower === "cd") {
     const target = (args[0] || "").toLowerCase();
     if (target.includes("secret")) {
-      return { html: `<span class="t-red">cd: permission denied.</span> ...fine, since you insist:\n${SECRET_LS}` };
+      return { html: `<span class="t-red">cd: permission denied</span>\n${SECRET_LS}\n<span class="t-dim">try: cat hire-leonardo.txt</span>` };
     }
-    return { html: `cd: this shell only has one directory, and it's <span class="t-blue">~</span>. try <span class="t-green">ls</span>` };
+    return { html: `cd: no such directory. try <span class="t-green">ls</span>` };
   }
 
   if (lower === "cat") {
@@ -209,8 +206,7 @@ export function initTerminal({ setWs } = {}) {
   }
 
   // greeting
-  print(`<span class="t-mauve">welcome.</span> this desktop is my actual rice — and my portfolio.`);
-  print(`type <span class="t-green">help</span> to look around, or click things.`);
+  print(`this is a copy of my desktop. type <span class="t-green">help</span> to see the commands.`);
   print("");
 
   return {

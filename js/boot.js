@@ -1,12 +1,11 @@
 // Boot sequence typed on the laptop screen itself, before the desktop shows.
 
 const LINES = [
-  ["b-dim", ":: leo-os 10.2026 (arch, btw)"],
-  ["b-ok", ":: mounting /dev/coffee ............ [ok]"],
-  ["b-ok", ":: loading hyprland.conf ........... [ok]"],
-  ["b-ok", ":: starting waybar ................. [ok]"],
-  ["b-ok", ":: importing 10 years of experience  [ok]"],
-  ["b-mauve", ":: welcome, visitor."],
+  ["b-dim", "leo-os (arch linux) 10.2026"],
+  ["b-ok", ":: running early hook [udev]"],
+  ["b-ok", "/dev/nvme0n1p2: clean, 512340/12206976 files"],
+  ["b-ok", ":: reached target graphical interface"],
+  ["b-mauve", ":: starting hyprland"],
 ];
 
 export function runScreenBoot(desktopEl, { instant = false } = {}) {

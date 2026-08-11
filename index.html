@@ -99,22 +99,22 @@
           <div class="win-body">
             <a class="proj" href="https://github.com/Leonardo-Flores/open-pos" target="_blank" rel="noreferrer">
               <span class="proj-name">open-pos</span>
-              <span class="proj-desc">Point-of-sale with pluggable payment providers — PIX, cards, a decline path you can demo.</span>
+              <span class="proj-desc">A point of sale I'm building in the open. Payment methods are plugins.</span>
               <span class="proj-tags mono">react · hono · postgres</span>
             </a>
             <a class="proj" href="https://github.com/Leonardo-Flores/terraform-aws-oidc-starter" target="_blank" rel="noreferrer">
               <span class="proj-name">terraform-aws-oidc-starter</span>
-              <span class="proj-desc">Keyless AWS deploys from GitHub Actions. Zero static credentials.</span>
+              <span class="proj-desc">How I deploy to AWS from GitHub Actions without storing keys.</span>
               <span class="proj-tags mono">terraform · oidc · aws</span>
             </a>
             <a class="proj" href="https://github.com/Leonardo-Flores/vilavest" target="_blank" rel="noreferrer">
               <span class="proj-name">vilavest</span>
-              <span class="proj-desc">E-commerce platform — Go backend, React storefront.</span>
+              <span class="proj-desc">E-commerce I built for a clothing store.</span>
               <span class="proj-tags mono">go · react · docker</span>
             </a>
             <a class="proj" href="https://github.com/Leonardo-Flores/dotfiles" target="_blank" rel="noreferrer">
               <span class="proj-name">dotfiles</span>
-              <span class="proj-desc">This very desktop — Arch + Hyprland, Catppuccin everywhere.</span>
+              <span class="proj-desc">The Arch + Hyprland config this site recreates.</span>
               <span class="proj-tags mono">arch · hyprland</span>
             </a>
           </div>
@@ -124,13 +124,13 @@
         <section class="win ws-3" id="win-about" data-title="about.md — nvim">
           <div class="win-bar"><span class="dot dot-about"></span>about.md</div>
           <div class="win-body about">
-            <p><strong>Leonardo Flores</strong> — full-stack engineer, 10 years in tech.
-            I started in infrastructure and moved into development, which shaped how I
-            build: reliability, performance, and maintainability from the first commit.</p>
-            <p>Currently the sole engineer behind a retail company's platform: POS with
-            live payments, executive dashboards, a factory-floor Rust/Tauri app with RFID,
-            and keyless CI/CD on AWS — <strong>4 products in production in 6 months</strong>.</p>
-            <p class="about-meta mono">são paulo · UTC−3 · remote worldwide · fluent english</p>
+            <p><strong>Leonardo Flores</strong>. Full-stack developer, 10 years in tech.
+            Started in infrastructure, moved to development.</p>
+            <p>Today I'm the only engineer at a retail company. I built their POS,
+            the dashboards the owners use every day, and the software that runs their
+            factory, including a Rust desktop app that prints RFID tags. Four systems
+            in production in my first six months there.</p>
+            <p class="about-meta mono">são paulo · UTC−3 · remote · english ok</p>
           </div>
         </section>
       </div>
@@ -144,17 +144,14 @@
   <main id="content">
     <section class="c-section" id="c-about">
       <h2 class="mono" data-i18n="about.h2"><span>##</span> about</h2>
-      <p data-i18n="about.p1">I'm <strong>Leonardo Flores</strong>, a full-stack software engineer in São Paulo,
-      Brazil — 10 years in technology. I started in infrastructure and moved into
-      development, which shaped how I build: reliability, performance, and maintainability
-      from the first commit.</p>
-      <p data-i18n="about.p2">Today I'm the <strong>sole engineer behind a retail company's entire technology
-      platform</strong>: a point of sale processing live payments (PIX, cards, TEF
-      terminals), executive dashboards with sub-100ms KPI reads, a factory-floor
-      Rust/Tauri desktop app with RFID, and 100% keyless CI/CD on AWS —
-      <strong>4 products shipped to production in 6 months</strong>. I've also integrated
-      AI/LLMs into production, including an AI/OCR pipeline that eliminated manual data
-      entry on a factory floor.</p>
+      <p data-i18n="about.p1">I'm <strong>Leonardo Flores</strong>, a full-stack developer in São Paulo. I've
+      been in tech for 10 years. I started in infrastructure, spent a few years
+      automating IT at QuintoAndar, and moved into development for good.</p>
+      <p data-i18n="about.p2">Today I'm the only engineer at a retail company. I built their point of sale
+      (it processes real payments), the dashboards the owners check every day, and the
+      systems that run their factory — including a Rust desktop app that prints RFID
+      tags. Everything runs on AWS and deploys through CI with no stored keys.
+      <strong>Four of those systems went to production in my first six months.</strong></p>
       <p class="c-meta mono">typescript · react · node.js · python · rust · aws · terraform · postgresql</p>
     </section>
 
@@ -163,25 +160,23 @@
       <div class="c-projects">
         <a class="c-proj" href="https://github.com/Leonardo-Flores/open-pos" target="_blank" rel="noreferrer">
           <span class="c-proj-name mono">open-pos</span>
-          <p data-i18n="work.pos">A point-of-sale system with pluggable payment providers. Adapter pattern for
-          PIX/cards/cash, prices snapshotted at sale time, money in integer cents, and a
-          deterministic decline path for demos. React 19, Hono, PostgreSQL.</p>
+          <p data-i18n="work.pos">A point of sale I'm building in the open. Payment methods are plugins — PIX,
+          cards and cash today, real acquirers later. React, Hono and Postgres.</p>
         </a>
         <a class="c-proj" href="https://github.com/Leonardo-Flores/terraform-aws-oidc-starter" target="_blank" rel="noreferrer">
           <span class="c-proj-name mono">terraform-aws-oidc-starter</span>
-          <p data-i18n="work.tf">Keyless AWS deploys from GitHub Actions: OIDC trust pinned per repo and
-          branch, read-only plans on PRs, gated applies on main. Zero static credentials —
-          use it as a template.</p>
+          <p data-i18n="work.tf">The Terraform setup I use to deploy to AWS from GitHub Actions without storing
+          any keys. PRs get a read-only plan, main gets the apply. Use it as a template.</p>
         </a>
         <a class="c-proj" href="https://github.com/Leonardo-Flores/vilavest" target="_blank" rel="noreferrer">
           <span class="c-proj-name mono">vilavest</span>
-          <p data-i18n="work.vila">E-commerce platform built with a Go backend, React storefront, and
-          PostgreSQL — fully dockerized.</p>
+          <p data-i18n="work.vila">An e-commerce I built for a clothing store. Go on the backend, React on the
+          front, Postgres underneath.</p>
         </a>
         <a class="c-proj" href="https://github.com/Leonardo-Flores/dotfiles" target="_blank" rel="noreferrer">
           <span class="c-proj-name mono">dotfiles</span>
-          <p data-i18n="work.dot">The Arch + Hyprland environment this site recreates — Catppuccin Mocha
-          everywhere, managed with GNU Stow.</p>
+          <p data-i18n="work.dot">My Arch + Hyprland config, the same desktop this site recreates. Catppuccin
+          Mocha everywhere.</p>
         </a>
       </div>
     </section>
@@ -191,31 +186,31 @@
       <ul class="c-xp">
         <li>
           <span class="c-xp-when mono">2026 — now</span>
-          <div data-i18n="xp.1"><strong>Founding Full-Stack Engineer</strong> · fashion/retail tech platform —
-          built the company's entire stack solo, from Terraform up to the POS.</div>
+          <div data-i18n="xp.1"><strong>Founding Engineer</strong> · retail tech. I build and run everything:
+          infra, backend, frontend, the POS, the factory systems.</div>
         </li>
         <li>
           <span class="c-xp-when mono">2025 — 2026</span>
-          <div data-i18n="xp.2"><strong>Full-Stack Developer</strong> · Itaú Unibanco (via consultancy) —
-          datacenter self-service portal, Python/Flask.</div>
+          <div data-i18n="xp.2"><strong>Full-Stack Developer</strong> · Itaú, through a consultancy. Internal
+          portal for datacenter operations. Python and Flask.</div>
         </li>
         <li>
           <span class="c-xp-when mono">2021 — 2024</span>
-          <div data-i18n="xp.3"><strong>Software Engineer</strong> · QuintoAndar — Python/Node automation,
-          microservices on AWS; cut user provisioning from ~10 min to under 1.</div>
+          <div data-i18n="xp.3"><strong>Software Engineer</strong> · QuintoAndar. Automation and internal
+          microservices on AWS. User provisioning went from 10 minutes to under 1.</div>
         </li>
         <li>
           <span class="c-xp-when mono">2019 — 2021</span>
-          <div data-i18n="xp.4"><strong>IT Infrastructure Analyst</strong> · QuintoAndar — where the
-          infrastructure instincts come from.</div>
+          <div data-i18n="xp.4"><strong>IT Infrastructure Analyst</strong> · QuintoAndar. Where I learned how
+          systems break.</div>
         </li>
       </ul>
     </section>
 
     <section class="c-section" id="c-contact">
       <h2 class="mono" data-i18n="contact.h2"><span>##</span> contact</h2>
-      <p data-i18n="contact.p">Open to remote roles worldwide (UTC−3, deep overlap with US time zones), and to
-      good conversations about hard problems.</p>
+      <p data-i18n="contact.p">I'm looking for remote roles, anywhere in the world. I'm in São Paulo (UTC−3).
+      Email is the fastest way to reach me.</p>
       <p class="c-links">
         <a href="mailto:leonardogoncalves.flores@gmail.com">leonardogoncalves.flores@gmail.com</a><br />
         <a href="https://www.linkedin.com/in/leonardo-g-flores" target="_blank" rel="noreferrer">linkedin.com/in/leonardo-g-flores</a><br />
@@ -226,7 +221,7 @@
 
     <footer class="c-footer mono">
       <span>© 2026 leonardo flores</span>
-      <span data-i18n="footer.tag">catppuccin mocha, as everything should be</span>
+      <span data-i18n="footer.tag">theme: catppuccin mocha</span>
     </footer>
   </main>
 

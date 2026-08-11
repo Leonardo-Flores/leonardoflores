@@ -14,50 +14,47 @@ const PT = {
   "hint.skip": "pular para a versão texto ↓",
   "about.h2": "<span>##</span> sobre",
   "about.p1":
-    `Sou o <strong>Leonardo Flores</strong>, engenheiro de software full-stack em São
-    Paulo — 10 anos em tecnologia. Comecei em infraestrutura e migrei para
-    desenvolvimento, o que moldou como eu construo software: confiabilidade,
-    performance e manutenibilidade desde o primeiro commit.`,
+    `Sou o <strong>Leonardo Flores</strong>, desenvolvedor full-stack em São Paulo.
+    Tenho 10 anos de tecnologia. Comecei em infraestrutura, passei uns anos
+    automatizando TI no QuintoAndar e migrei de vez pra desenvolvimento.`,
   "about.p2":
-    `Hoje sou o <strong>único engenheiro por trás de toda a plataforma de tecnologia de
-    uma empresa de varejo</strong>: um PDV processando pagamentos reais (PIX, cartões,
-    TEF), dashboards executivos com leituras de KPI abaixo de 100ms, um app desktop
-    Rust/Tauri com RFID no chão de fábrica, e CI/CD 100% sem credenciais estáticas na
-    AWS — <strong>4 produtos em produção em 6 meses</strong>. Também levei IA/LLMs para
-    produção, incluindo um pipeline de IA/OCR que eliminou digitação manual na fábrica.`,
-  "work.h2": "<span>##</span> projetos selecionados",
+    `Hoje sou o único engenheiro de uma empresa de varejo. Construí o PDV deles
+    (que processa pagamento de verdade), os dashboards que os donos olham todo dia
+    e os sistemas que rodam a fábrica — incluindo um app desktop em Rust que imprime
+    etiquetas RFID. Tudo roda na AWS e sobe por CI, sem nenhuma chave guardada.
+    <strong>Foram quatro sistemas em produção nos meus primeiros seis meses.</strong>`,
+  "work.h2": "<span>##</span> projetos",
   "work.pos":
-    `Sistema de PDV com provedores de pagamento plugáveis. Padrão adapter para
-    PIX/cartões/dinheiro, preços congelados no momento da venda, dinheiro em centavos
-    inteiros e um caminho de recusa determinístico para demos. React 19, Hono, PostgreSQL.`,
+    `Um PDV que estou construindo aberto. Os meios de pagamento são plugins — PIX,
+    cartão e dinheiro hoje, adquirentes de verdade depois. React, Hono e Postgres.`,
   "work.tf":
-    `Deploys na AWS sem chaves a partir do GitHub Actions: confiança OIDC restrita por
-    repositório e branch, plans somente-leitura em PRs, applies protegidos na main.
-    Zero credenciais estáticas — use como template.`,
+    `O setup de Terraform que eu uso pra fazer deploy na AWS pelo GitHub Actions sem
+    guardar chave nenhuma. PR recebe um plan somente leitura, a main recebe o apply.
+    Dá pra usar como template.`,
   "work.vila":
-    `Plataforma de e-commerce com backend em Go, loja em React e PostgreSQL —
-    totalmente dockerizada.`,
+    `Um e-commerce que fiz pra uma loja de roupas. Go no backend, React na frente,
+    Postgres embaixo.`,
   "work.dot":
-    `O ambiente Arch + Hyprland que este site recria — Catppuccin Mocha em tudo,
-    gerenciado com GNU Stow.`,
+    `Minha config de Arch + Hyprland, o mesmo desktop que este site recria.
+    Catppuccin Mocha em tudo.`,
   "xp.h2": "<span>##</span> experiência",
   "xp.1":
-    `<strong>Engenheiro Full-Stack Fundador</strong> · plataforma de tecnologia para
-    moda/varejo — construí a stack inteira da empresa sozinho, do Terraform ao PDV.`,
+    `<strong>Engenheiro Fundador</strong> · tech de varejo. Construo e opero tudo:
+    infra, backend, frontend, o PDV, os sistemas da fábrica.`,
   "xp.2":
-    `<strong>Desenvolvedor Full-Stack</strong> · Itaú Unibanco (via consultoria) —
-    portal self-service do datacenter, Python/Flask.`,
+    `<strong>Desenvolvedor Full-Stack</strong> · Itaú, via consultoria. Portal interno
+    de operações do datacenter. Python e Flask.`,
   "xp.3":
-    `<strong>Engenheiro de Software</strong> · QuintoAndar — automação Python/Node,
-    microsserviços na AWS; provisionamento de usuários de ~10 min para menos de 1.`,
+    `<strong>Engenheiro de Software</strong> · QuintoAndar. Automação e microsserviços
+    internos na AWS. Provisionamento de usuário caiu de 10 minutos pra menos de 1.`,
   "xp.4":
-    `<strong>Analista de Infraestrutura de TI</strong> · QuintoAndar — de onde vêm os
-    instintos de infraestrutura.`,
+    `<strong>Analista de Infraestrutura</strong> · QuintoAndar. Onde aprendi como os
+    sistemas quebram.`,
   "contact.h2": "<span>##</span> contato",
   "contact.p":
-    `Aberto a vagas remotas no mundo todo (UTC−3, grande sobreposição com fusos dos
-    EUA) e a boas conversas sobre problemas difíceis.`,
-  "footer.tag": "catppuccin mocha, como tudo deveria ser",
+    `Procuro vaga remota, de qualquer lugar do mundo. Estou em São Paulo (UTC−3).
+    E-mail é o jeito mais rápido de falar comigo.`,
+  "footer.tag": "tema: catppuccin mocha",
 };
 
 export function initI18n() {
