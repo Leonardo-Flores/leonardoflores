@@ -4,7 +4,6 @@ import { initI18n } from "./i18n.js";
 import { initTerminal } from "./terminal.js";
 
 const desktopEl = document.getElementById("desktop");
-const loader = document.getElementById("loader");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function webglAvailable() {
@@ -51,17 +50,11 @@ const term = initTerminal({ setWs });
 
 const use3D = window.innerWidth >= 900 && webglAvailable();
 
-function hideLoader() {
-  loader.classList.add("done");
-  setTimeout(() => loader.remove(), 650);
-}
-
 if (use3D) {
   try {
     const { initScene } = await import("./scene.js");
     await document.fonts.ready;
     initScene({ desktopEl, term, reducedMotion }); // opens already docked on the screen
-    hideLoader();
     await runScreenBoot(desktopEl, { instant: reducedMotion });
     term.focus();
   } catch (err) {
@@ -82,6 +75,5 @@ function enterFlat() {
   fitFlat();
   window.addEventListener("resize", fitFlat);
 
-  hideLoader();
   runScreenBoot(desktopEl, { instant: reducedMotion });
 }

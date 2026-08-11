@@ -22,33 +22,6 @@ body {
 
 .mono { font-family: "JetBrains Mono", ui-monospace, Menlo, monospace; }
 
-/* ── loader ── */
-
-#loader {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: #11111b;
-  display: grid;
-  place-content: center;
-  color: #cdd6f4;
-  transition: opacity 0.55s ease;
-}
-#loader.done { opacity: 0; pointer-events: none; }
-.ld-inner { min-width: min(30rem, 86vw); }
-.ld-name { font-size: 1.35rem; font-weight: 700; letter-spacing: 0.06em; margin: 0 0 0.3rem; }
-.ld-role { color: #cba6f7; font-size: 0.85rem; margin: 0 0 1.8rem; }
-#ld-boot {
-  min-height: 10.5em;
-  font-size: 0.82rem;
-  line-height: 1.75;
-  text-align: left;
-  white-space: pre-wrap;
-}
-#ld-boot .b-dim { color: #6c7086; }
-#ld-boot .b-ok { color: #a6e3a1; }
-#ld-boot .b-mauve { color: #cba6f7; }
-
 /* ── stage ── */
 
 #stage { position: fixed; inset: 0; }

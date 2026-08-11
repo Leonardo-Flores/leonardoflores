@@ -227,51 +227,6 @@ export function initScene({ desktopEl, term, reducedMotion }) {
     desktopEl.style.visibility = power <= 0 ? "hidden" : "visible";
   }
 
-  // --- shard tunnel ----------------------------------------------------------
-  // Angular fragments around the camera-to-screen axis. Visible while diving
-  // in/out and framing the edges while docked — the "leaving the screen" feel.
-
-  const shardGroup = new THREE.Group();
-  scene.add(shardGroup);
-
-  const shardMat = new THREE.MeshStandardMaterial({
-    color: 0x24263a,
-    metalness: 0.35,
-    roughness: 0.55,
-    transparent: true,
-    opacity: 0,
-    depthWrite: false,
-  });
-  const shardGeo = new THREE.TetrahedronGeometry(1);
-  const SHARDS = 130;
-  const shards = new THREE.InstancedMesh(shardGeo, shardMat, SHARDS);
-  {
-    const sMat = new THREE.Matrix4();
-    const q = new THREE.Quaternion();
-    const e = new THREE.Euler();
-    for (let s = 0; s < SHARDS; s++) {
-      const angle = Math.random() * Math.PI * 2;
-      const radius = 950 + Math.random() * 1500;
-      const depth = 200 + Math.random() * 2300; // along screen normal
-      const size = 60 + Math.random() * 240;
-      e.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI);
-      q.setFromEuler(e);
-      sMat.compose(
-        new THREE.Vector3(Math.cos(angle) * radius, Math.sin(angle) * radius, depth),
-        q,
-        new THREE.Vector3(size, size, size),
-      );
-      shards.setMatrixAt(s, sMat);
-    }
-  }
-  shardGroup.add(shards);
-
-  function syncShards() {
-    // align the tunnel with the screen plane
-    shardGroup.position.copy(cssObj.position);
-    shardGroup.quaternion.copy(cssObj.quaternion);
-  }
-
   // --- environment -----------------------------------------------------------
 
   scene.add(new THREE.HemisphereLight(0x9aa0c8, 0x14151f, 1.2));
@@ -425,7 +380,6 @@ export function initScene({ desktopEl, term, reducedMotion }) {
     }
 
     syncScreen();
-    syncShards();
 
     // camera along the timeline
     tmpN.set(0, 0, 1).applyQuaternion(cssObj.quaternion);
@@ -440,11 +394,6 @@ export function initScene({ desktopEl, term, reducedMotion }) {
       camGoal.lerpVectors(CAM_OPEN.pos, CAM_CLOSED.pos, k);
       targetGoal.lerpVectors(CAM_OPEN.tgt, CAM_CLOSED.tgt, k);
     }
-
-    // shard tunnel opacity: strong while docked/diving, gone by mid-flight
-    const shardTarget = u < 0.26 ? (1 - u / 0.26) * 0.85 : 0;
-    shardMat.opacity += (shardTarget - shardMat.opacity) * 0.08;
-    shardGroup.rotation.z += reducedMotion ? 0 : 0.0006;
 
     const px = idleFloat ? mouse.x * 60 : 0;
     const py = idleFloat ? -mouse.y * 40 : 0;
