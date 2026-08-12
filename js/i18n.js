@@ -15,14 +15,17 @@ const PT = {
   "about.h2": "<span>##</span> sobre",
   "about.p1":
     `Sou o <strong>Leonardo Flores</strong>, desenvolvedor full-stack em São Paulo.
-    Tenho 10 anos de tecnologia. Comecei em infraestrutura, passei uns anos
-    automatizando TI no QuintoAndar e migrei de vez pra desenvolvimento.`,
+    Tenho 10 anos de tecnologia, e minha carreira é o mesmo ciclo repetido: pegar
+    trabalho manual, transformar em software, documentar e passar adiante. No
+    QuintoAndar isso me levou do help desk à identidade de mais de 2.000 pessoas —
+    as plataformas internas que eu tocava sozinho depois precisaram de um time de
+    cinco pra me substituir.`,
   "about.p2":
-    `Hoje sou o único engenheiro de uma empresa de varejo. Construí o PDV deles
-    (que processa pagamento de verdade), os dashboards que os donos olham todo dia
-    e os sistemas que rodam a fábrica — incluindo um app desktop em Rust que imprime
-    etiquetas RFID. Tudo roda na AWS e sobe por CI, sem nenhuma chave guardada.
-    <strong>Foram quatro sistemas em produção nos meus primeiros seis meses.</strong>`,
+    `Hoje sou o único engenheiro de uma empresa de varejo. Construí o PDV deles —
+    <strong>processou R$ 513 mil em 3.404 pedidos num evento de três dias</strong> —
+    os dashboards que os donos olham todo dia e os sistemas que rodam a fábrica,
+    usados por uns 30 operadores diariamente. Tudo roda na AWS e sobe por CI, sem
+    nenhuma chave guardada. Quatro sistemas em produção nos meus primeiros seis meses.`,
   "work.h2": "<span>##</span> projetos",
   "work.pos":
     `Um PDV que estou construindo aberto. Os meios de pagamento são plugins — PIX,
@@ -45,11 +48,13 @@ const PT = {
     `<strong>Desenvolvedor Full-Stack</strong> · Itaú, via consultoria. Portal interno
     de operações do datacenter. Python e Flask.`,
   "xp.3":
-    `<strong>Engenheiro de Software</strong> · QuintoAndar. Automação e microsserviços
-    internos na AWS. Provisionamento de usuário caiu de 10 minutos pra menos de 1.`,
+    `<strong>Engenheiro de Software</strong> · QuintoAndar. Dono da identidade no
+    Keycloak (350 → 2.000+ usuários, sincronizada com AD e Google Workspace).
+    Migrei 2.500 pessoas pro Slack Enterprise Grid, em inglês, com o time do Slack.`,
   "xp.4":
-    `<strong>Analista de Infraestrutura</strong> · QuintoAndar. Onde aprendi como os
-    sistemas quebram.`,
+    `<strong>Suporte → Tech Partner</strong> · QuintoAndar. Construí os service desks
+    internos que cinco áreas usavam (200–300 chamados por dia). Um time de cinco
+    pessoas assumiu depois o que eu tocava sozinho.`,
   "contact.h2": "<span>##</span> contato",
   "contact.p":
     `Procuro vagas remotas e freelas, de qualquer lugar do mundo. Estou em
