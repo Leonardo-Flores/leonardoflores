@@ -15,20 +15,19 @@ const PT = {
   "about.h2": "<span>##</span> sobre",
   "about.p1":
     `Sou o <strong>Leonardo Flores</strong>, desenvolvedor full-stack em São Paulo.
-    Tenho 10 anos de tecnologia, e minha carreira é o mesmo ciclo repetido: pegar
-    trabalho manual, transformar em software, documentar e passar adiante. No
-    QuintoAndar isso me levou do help desk à identidade de mais de 2.000 pessoas —
-    as plataformas internas que eu tocava sozinho depois precisaram de um time de
-    cinco pra me substituir.`,
+    Tenho 10 anos de tecnologia. Comecei no suporte e fui automatizando o que era
+    manual até que construir software virou o próprio trabalho. No QuintoAndar isso
+    me levou do help desk à identidade de mais de 2.000 pessoas; quando mudei de
+    função, um time de cinco pessoas assumiu as plataformas internas que eu cuidava.`,
   "about.p2":
-    `Hoje sou o único engenheiro de uma empresa de varejo. Construí o PDV deles —
-    <strong>processou R$ 513 mil em 3.404 pedidos num evento de três dias</strong> —
+    `Hoje sou o primeiro engenheiro de uma empresa de varejo. Construí o PDV deles
+    (<strong>processou R$ 513 mil em 3.404 pedidos num evento de três dias</strong>),
     os dashboards que os donos olham todo dia e os sistemas que rodam a fábrica,
     usados por uns 30 operadores diariamente. Tudo roda na AWS e sobe por CI, sem
     nenhuma chave guardada. Quatro sistemas em produção nos meus primeiros seis meses.`,
   "work.h2": "<span>##</span> projetos",
   "work.pos":
-    `Um PDV que estou construindo aberto. Os meios de pagamento são plugins — PIX,
+    `Um PDV que estou construindo aberto. Os meios de pagamento são plugins: PIX,
     cartão e dinheiro hoje, adquirentes de verdade depois. React, Hono e Postgres.`,
   "work.tf":
     `O setup de Terraform que eu uso pra fazer deploy na AWS pelo GitHub Actions sem
@@ -42,7 +41,7 @@ const PT = {
     Catppuccin Mocha em tudo.`,
   "xp.h2": "<span>##</span> experiência",
   "xp.1":
-    `<strong>Engenheiro Fundador</strong> · tech de varejo. Construo e opero tudo:
+    `<strong>Primeiro Engenheiro</strong> · tech de varejo. Construo e opero tudo:
     infra, backend, frontend, o PDV, os sistemas da fábrica.`,
   "xp.2":
     `<strong>Desenvolvedor Full-Stack</strong> · Itaú, via consultoria. Portal interno
@@ -54,7 +53,7 @@ const PT = {
   "xp.4":
     `<strong>Suporte → Tech Partner</strong> · QuintoAndar. Construí os service desks
     internos que cinco áreas usavam (200–300 chamados por dia). Um time de cinco
-    pessoas assumiu depois o que eu tocava sozinho.`,
+    pessoas assumiu esse trabalho depois.`,
   "contact.h2": "<span>##</span> contato",
   "contact.p":
     `Procuro vagas remotas e freelas, de qualquer lugar do mundo. Estou em
